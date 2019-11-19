@@ -1,0 +1,33 @@
+{
+  "name": "cicdtest",
+  "version": "1.0.0",
+  "description": "CD/CD Test",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3"
+  },
+  "devDependencies": {
+    "expect": "^24.9.0",
+    "mocha": "^6.2.2",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ucipass/cicdtest.git"
+  },
+  "keywords": [
+    "CI",
+    "CD",
+    "Test"
+  ],
+  "author": "ucipass",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ucipass/cicdtest/issues"
+  },
+  "homepage": "https://github.com/ucipass/cicdtest#readme"
+}
