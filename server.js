@@ -5,7 +5,7 @@ const server = http.createServer(app);
 const port = 3000;
 server.listen(port);
 /**
- * Event listener for HTTP server "error" event.
+ * Event listener for HTTP server "error " event.
  */
 
 const onError = (error) => {
