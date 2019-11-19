@@ -1,10 +1,10 @@
 FROM node:10.16.0-alpine
 
-WORKDIR /source/example
+WORKDIR /source/cicdtest
 
-COPY package.json /source/example
+COPY package.json /source/cicdtest
 
-RUN cd /source/example && npm i --only=production
+RUN cd /source/cicdtest && npm i --only=production
 
 COPY . .
 
