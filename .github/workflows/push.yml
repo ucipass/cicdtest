@@ -5,11 +5,11 @@ jobs:
     name: build and publish
     runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 12.x 
-    - run: npm install 
+  - uses: actions/checkout@v1
+  - uses: actions/setup-node@v1
+    with:
+      node-version: 12.x 
+  - run: npm install 
   # - run: npm test
       # - name: npm install
       #   uses: actions/npm@master
