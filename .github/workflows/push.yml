@@ -4,30 +4,35 @@ jobs:
   build-and-publish:
     name: build and publish
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: npm install
-        uses: actions/npm@master
-        with:
-          args: install
-      - name: npm test
-        uses: actions/npm@master
-        with:
-          args: run test
-      - name: npm lint
-        uses: actions/npm@master
-        with:
-          args: run lint
-      - name: docker build
-        uses: actions/docker/cli@master
-        with:
-          args: build -t ucipass/cicdtest .
-      - name: docker login
-        uses: actions/docker/login@master
-        env:
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      - name: docker push
-        uses: actions/docker/cli@master
-        with:
-          args: push ucipass/cicdtest
+  steps:
+  - uses: actions/checkout@v1
+  - uses: actions/setup-node@v1
+    with:
+      node-version: 12.x 
+  - run: npm install
+  # - run: npm test
+      # - name: npm install
+      #   uses: actions/npm@master
+      #   with:
+      #     args: install
+      # - name: npm test
+      #   uses: actions/npm@master
+      #   with:
+      #     args: run test
+      # - name: npm lint
+      #   uses: actions/npm@master
+      #   with:
+      #     args: run lint
+      # - name: docker build
+      #   uses: actions/docker/cli@master
+      #   with:
+      #     args: build -t ucipass/cicdtest .
+      # - name: docker login
+      #   uses: actions/docker/login@master
+      #   env:
+      #     DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      #     DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      # - name: docker push
+      #   uses: actions/docker/cli@master
+      #   with:
+      #     args: push ucipass/cicdtest
